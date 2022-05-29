@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        <TextBox Header="Local Path" Margin="0,0,0,16" Text="{Binding LocalPath, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Header="Local Path" Margin="0,0,0,16" Text="{x:Bind ViewModel.LocalPath}" x:DefaultBindMode="TwoWay"/>
         <Button Content="Choose Folder" Margin="0,0,0,16" Command="{Binding SelectLocalPathCommand}"/>
     </StackPanel>
 </Page>
